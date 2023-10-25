@@ -1,0 +1,30 @@
+{
+    "manifest_version":3,
+    "name":"Whether Report Extention",
+    "version":"1.0",
+    "description":"Chrome extention that provide whether report",
+    "permissions":["geolocation"],
+    "background":{
+        "service_worker":"index.js"
+    },
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["content.js"]
+        }
+    ],
+    "action":{
+        "default_popup":"index.html",
+        "default_icons":{
+            "16":"Images/Logo16.png",
+            "48":"Images/Logo48.png",
+            "128":"Images/Logo128.png"
+        }
+    },
+
+    "icons":{
+        "16":"Images/Logo16.png",
+        "48":"Images/Logo48.png",
+        "128":"Images/Logo128.png"
+    }
+}
